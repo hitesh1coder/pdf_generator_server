@@ -17,6 +17,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 
